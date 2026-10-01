@@ -1,0 +1,301 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Collectibles I-rie Price Guide</title><link id="fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap"><style id="css">
+:root{
+  --paper:#FFFFFF; --card:#FFFFFF; --ink:#000000; --ink-2:#5E5E5E; --line:#E2E2E2;
+  --cobalt:#000000; --sticker:#000000; --sticker-ink:#FFFFFF; --sold:#000000;
+  --ph-a:#F4F4F4; --ph-b:#EDEDED; --shadow:none;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:12px;padding-block:12px 10px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;margin-right:auto;min-width:0}
+.brand b{font-family:var(--display);font-weight:800;font-size:clamp(22px,4.4vw,30px);letter-spacing:-.02em;line-height:1}
+.brand b i{font-style:normal;color:var(--cobalt)}
+.brand span{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-2);margin-top:5px}
+.search{flex:1 1 240px;max-width:360px;position:relative}
+.search input{width:100%;height:40px;border:1px solid var(--line);border-radius:999px;background:var(--card);padding:0 16px 0 38px}
+.search svg{position:absolute;left:13px;top:12px;width:16px;height:16px;stroke:var(--ink-2)}
+.tools{display:flex;gap:8px;align-items:center;padding-bottom:12px;flex-wrap:wrap}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0}
+.chips::-webkit-scrollbar{display:none}
+.chip-btn{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap}
+.chip-btn small{font-family:var(--mono);color:var(--ink-2);margin-left:4px;font-size:11px}
+.chip-btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip-btn[aria-pressed="true"] small{color:inherit;opacity:.7}
+.opts{display:flex;gap:8px;align-items:center;flex:none}
+select.sel{height:32px;border:1px solid var(--line);border-radius:8px;background:var(--card);padding:0 8px;font-size:13px}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2);cursor:pointer;white-space:nowrap}
+.tog input{accent-color:var(--cobalt)}
+main{padding-block:18px 40px}
+.count{font-size:12px;color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:14px}
+@media (max-width:420px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+.card{all:unset;box-sizing:border-box;display:flex;flex-direction:column;background:var(--card);border-radius:6px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;cursor:pointer;position:relative}
+.card:focus-visible{outline:2px solid var(--cobalt)}
+.card:hover .ph img{transform:scale(1.03)}
+.ph{aspect-ratio:4/5;max-width:100%;background:repeating-linear-gradient(135deg,var(--ph-a) 0 12px,var(--ph-b) 12px 24px);display:grid;place-items:center;overflow:hidden;position:relative}
+.ph img{width:100%;height:100%;object-fit:contain;background:#fff;transition:transform .3s}
+.ph .glyph{font-family:var(--display);font-weight:800;font-size:40px;color:var(--ink-2);opacity:.45;letter-spacing:-.03em}
+.ph .cat{position:absolute;left:8px;bottom:8px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;background:var(--card);color:var(--ink-2);padding:3px 7px;border-radius:4px}
+.tag{position:absolute;top:8px;right:8px;background:var(--sticker);color:var(--sticker-ink);font-family:var(--mono);font-weight:700;font-size:15px;padding:4px 9px;border-radius:2px;font-variant-numeric:tabular-nums}
+.tag s{font-weight:500;opacity:.6;font-size:11px;margin-right:4px}
+.info{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.lot{font-family:var(--mono);font-size:11px;color:var(--ink-2);display:flex;justify-content:space-between;gap:6px}
+.name{font-weight:600;font-size:14px;line-height:1.3;margin:0;overflow-wrap:anywhere}
+.state{font-family:var(--body);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:1px 6px;border-radius:3px}
+.state.sold{color:var(--sold);border:1px solid var(--sold)}
+.state.hidden{color:var(--ink-2);border:1px dashed var(--ink-2)}
+.card.is-sold .ph{filter:grayscale(.85);opacity:.7}
+.card.is-sold .tag{background:var(--card);color:var(--ink-2);text-decoration:line-through}
+.card.is-hidden{opacity:.55}
+.empty{padding:48px 16px;text-align:center;color:var(--ink-2)}
+footer{border-top:1px solid var(--line);padding-block:18px 28px;font-size:13px;color:var(--ink-2);display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+footer a{color:var(--cobalt)}
+.linkbtn{all:unset;cursor:pointer;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
+/* manage */
+.mbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;margin-bottom:14px;border-radius:10px;background:var(--card);border:1px dashed var(--cobalt)}
+.mbar p{margin:0 auto 0 0;font-size:13px;color:var(--ink-2)}
+.btn{border:0;border-radius:8px;padding:9px 14px;font-weight:600;font-size:14px;cursor:pointer;background:var(--card);border:1px solid var(--line)}
+.btn.primary{background:#000;color:#fff;border-color:#000}
+.brand b{text-transform:uppercase;letter-spacing:.01em}
+.card.is-sold .tag{border:1px solid var(--line)}
+.pub .btn{background:#fff;color:#000;border-color:#fff}
+.pub .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.warn{color:var(--sold);border-color:var(--sold)}
+.btn:disabled{opacity:.5;cursor:default}
+.pub{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--ink);color:var(--paper);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.pub .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-inline:0}
+.pub p{margin:0 auto 0 0;font-size:14px}
+/* overlay */
+.ov{position:fixed;inset:0;z-index:10;background:rgba(8,11,30,.55);display:flex;align-items:flex-end;justify-content:center}
+@media (min-width:700px){.ov{align-items:center}}
+.sheet{background:var(--card);width:100%;max-width:720px;max-height:92vh;overflow:auto;border-radius:16px 16px 0 0;padding:18px 16px calc(20px + env(safe-area-inset-bottom,0px))}
+@media (min-width:700px){.sheet{border-radius:16px;padding:22px}}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.sheet-head h2{font-family:var(--display);font-size:22px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.x{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);flex:none}
+.detail{display:grid;gap:18px}
+@media (min-width:700px){.detail{grid-template-columns:1fr 1fr}}
+.detail .ph{border-radius:10px}
+.big-price{font-family:var(--mono);font-weight:700;font-size:34px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.big-price s{font-size:16px;color:var(--ink-2);font-weight:500;margin-left:8px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:12px 0}
+.kv dt{color:var(--ink-2);font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+.kv dd{margin:0}
+.note{white-space:pre-wrap;color:var(--ink-2);font-size:14px}
+form.ed{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{display:flex;flex-direction:column;gap:5px;min-width:0}
+.f label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2)}
+.f input,.f select,.f textarea{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:9px 10px;width:100%;font:inherit;color:inherit}
+.f textarea{min-height:64px;resize:vertical}
+.photo{display:flex;gap:12px;align-items:center}
+.photo .ph{width:84px;flex:none;border-radius:8px}
+.photo .ph .glyph{font-size:22px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-top:4px}
+.acts .left{margin-right:auto}
+.msg{font-size:13px;color:var(--sold);margin:0}
+.toast{position:fixed;left:50%;top:calc(14px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:20;background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;font-size:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><div id="app"></div><script type="application/json" id="catalog">{"updatedAt": "2026-10-01T00:52:00+05:30", "categories": ["TCG", "Die-cast", "Figures & Blind Boxes"], "products": [{"id": "p44", "lot": 44, "name": "Jolteon Pearlescent Pop!", "cat": "Figures & Blind Boxes", "price": 3100, "status": "available", "img": "img/p44.jpg"}, {"id": "p45", "lot": 45, "name": "Bitty Pop! Rides Armored Batman with Batmobile", "cat": "Figures & Blind Boxes", "price": 980, "status": "available", "img": "img/p45.jpg"}, {"id": "p46", "lot": 46, "name": "Barbie Signature LeBron James Kenbassador", "cat": "Figures & Blind Boxes", "price": 7200, "status": "available", "img": "img/p46.jpg"}, {"id": "p47", "lot": 47, "name": "Superplastic × Post Malone", "cat": "Figures & Blind Boxes", "price": 9500, "status": "available", "note": "Limited edition premium vinyl art figure.", "img": "img/p47.jpg"}, {"id": "p48", "lot": 48, "name": "Hacipupu Gummy Bear Series Plush Pendant Blind Box", "cat": "Figures & Blind Boxes", "price": 3700, "status": "available", "note": "POP MART · 13 cm · 12 designs per set, secret chase possible.", "img": "img/p48.jpg"}, {"id": "p49", "lot": 49, "name": "Labubu The Monsters Exciting Macaron Vinyl Face Blind Box", "cat": "Figures & Blind Boxes", "price": 3600, "status": "available", "img": "img/p49.jpg"}, {"id": "p50", "lot": 50, "name": "Labubu The Monsters Big Into Energy Plush Pendant Blind Box", "cat": "Figures & Blind Boxes", "price": 3700, "status": "available", "img": "img/p50.jpg"}, {"id": "p51", "lot": 51, "name": "Molly Carb-Lover Series Figures", "cat": "Figures & Blind Boxes", "price": 2300, "status": "available", "note": "POP MART · 7–10 cm · 12 designs per set.", "img": "img/p51.jpg"}, {"id": "p52", "lot": 52, "name": "Dimoo By Your Side Series Figures", "cat": "Figures & Blind Boxes", "price": 2100, "status": "available", "note": "POP MART · 9 cm · 12 designs per set.", "img": "img/p52.jpg"}, {"id": "s53", "lot": 53, "name": "Iono’s Bellibolt ex Premium Collection", "cat": "TCG", "price": 8500, "status": "available", "img": "img/s53.jpg"}, {"id": "s54", "lot": 54, "name": "Kleavor VSTAR Premium Collection", "cat": "TCG", "price": 11500, "status": "available", "img": "img/s54.jpg"}, {"id": "s55", "lot": 55, "name": "Houndstone ex Box", "cat": "TCG", "price": 6300, "status": "available", "img": "img/s55.jpg"}, {"id": "s56", "lot": 56, "name": "Annihilape ex Box", "cat": "TCG", "price": 6800, "status": "available", "img": "img/s56.jpg"}, {"id": "s57", "lot": 57, "name": "Armarouge ex Premium Collection", "cat": "TCG", "price": 8600, "status": "available", "img": "img/s57.jpg"}, {"id": "s58", "lot": 58, "name": "Journey Together Elite Trainer Box", "cat": "TCG", "price": 14500, "status": "available", "img": "img/s58.jpg"}, {"id": "s59", "lot": 59, "name": "Knock Out Collection (Boltund, Eiscue, Galarian Sirfetch’d)", "cat": "TCG", "price": 4300, "status": "available", "img": "img/s59.jpg"}, {"id": "s60", "lot": 60, "name": "Legendary Birds 2-Pack Blister (Zapdos, Moltres, Articuno)", "cat": "TCG", "price": 5500, "status": "available", "img": "img/s60.jpg"}, {"id": "s61", "lot": 61, "name": "Journey Together 3-Pack Blister (Scrafty)", "cat": "TCG", "price": 3050, "status": "available", "img": "img/s61.jpg"}, {"id": "s62", "lot": 62, "name": "Temporal Forces Booster Pack", "cat": "TCG", "price": 1245, "status": "available", "img": "img/s62.jpg"}, {"id": "s63", "lot": 63, "name": "Twilight Masquerade Booster Pack", "cat": "TCG", "price": 1245, "status": "available", "img": "img/s63.jpg"}, {"id": "s64", "lot": 64, "name": "Obsidian Flames Booster Pack", "cat": "TCG", "price": 1450, "status": "available", "img": "img/s64.jpg"}, {"id": "s65", "lot": 65, "name": "Stellar Crown Booster Pack", "cat": "TCG", "price": 1350, "status": "available", "img": "img/s65.jpg"}, {"id": "s66", "lot": 66, "name": "Paradox Rift Checklane Blister (Sinistea)", "cat": "TCG", "price": 1700, "status": "available", "img": "img/s66.jpg"}, {"id": "s67", "lot": 67, "name": "Temporal Forces Checklane Blister (Bellibolt)", "cat": "TCG", "price": 1700, "status": "available", "img": "img/s67.jpg"}, {"id": "s68", "lot": 68, "name": "Journey Together Premium Checklane Blister (Rhyperior)", "cat": "TCG", "price": 3600, "status": "available", "img": "img/s68.jpg"}, {"id": "s69", "lot": 69, "name": "Journey Together Sleeved Booster Pack", "cat": "TCG", "price": 1100, "status": "available", "img": "img/s69.jpg"}, {"id": "s70", "lot": 70, "name": "Charizard ex Special Collection", "cat": "TCG", "price": 8000, "status": "available", "img": "img/s70.jpg"}, {"id": "s71", "lot": 71, "name": "Paradox Rift Booster Pack", "cat": "TCG", "price": 1055, "status": "available", "img": "img/s71.jpg"}, {"id": "s72", "lot": 72, "name": "Palafin ex Box", "cat": "TCG", "price": 8155, "status": "available", "img": "img/s72.jpg"}, {"id": "o73", "lot": 73, "name": "One Piece Card Game Mini Tin – Luffy (OP-10 Royal Blood)", "cat": "TCG", "price": 7200, "status": "available", "img": "img/o73.jpg"}, {"id": "o74", "lot": 74, "name": "One Piece Special DON!! Set Vol.1 – Luffy", "cat": "TCG", "price": 10500, "status": "available", "img": "img/o74.jpg"}, {"id": "o75", "lot": 75, "name": "One Piece Special DON!! Set Vol.2 – Ace", "cat": "TCG", "price": 10500, "status": "available", "img": "img/o75.jpg"}, {"id": "o76", "lot": 76, "name": "One Piece Special DON!! Set Vol.3 – Sabo", "cat": "TCG", "price": 10500, "status": "available", "img": "img/o76.jpg"}, {"id": "e77", "lot": 77, "name": "Temporal Forces Elite Trainer Box (Walking Wake)", "cat": "TCG", "price": 16800, "status": "available", "img": "img/e77.jpg"}, {"id": "c78", "lot": 78, "name": "Hot Wheels × Ferrari Heritage Set", "cat": "Die-cast", "price": 21000, "status": "available", "img": "img/c78.jpg"}, {"id": "c79", "lot": 79, "name": "RLC 2022 Ford Mustang Shelby GT500 Code Red", "cat": "Die-cast", "price": 12000, "status": "available", "img": "img/c79.jpg"}, {"id": "c80", "lot": 80, "name": "Elite 64 Porsche 911 GT2 EVO 993", "cat": "Die-cast", "price": 6000, "status": "available", "img": "img/c80.jpg"}, {"id": "c81", "lot": 81, "name": "Hot Wheels Collectors Anime Series: Naruto Nissan Silvia (S15)", "cat": "Die-cast", "price": 8000, "status": "available", "img": "img/c81.jpg"}, {"id": "c82", "lot": 82, "name": "RLC Mercedes-AMG G 63 4×4²", "cat": "Die-cast", "price": 8200, "status": "available", "img": "img/c82.jpg"}, {"id": "c83", "lot": 83, "name": "Hot Wheels RC 1:64 Lamborghini Temerario (Mattel Creations)", "cat": "Die-cast", "price": 8300, "status": "available", "img": "img/c83.jpg"}, {"id": "c84", "lot": 84, "name": "Hot Wheels Premium Car Culture Slide Street 2: 2018 Ford Mustang RTR Spec 5", "cat": "Die-cast", "price": 1200, "status": "available", "img": "img/c84.jpg"}, {"id": "c85", "lot": 85, "name": "RLC ’64 Dodge Power Wagon", "cat": "Die-cast", "price": 5200, "status": "available", "img": "img/c85.jpg"}, {"id": "c86", "lot": 86, "name": "Hot Wheels Legends Archive × Daniel Arsham Eroded Mustang", "cat": "Die-cast", "price": 10000, "status": "available", "img": "img/c86.jpg"}, {"id": "c87", "lot": 87, "name": "Hot Wheels Elite 64 Pandem Datsun 280ZX", "cat": "Die-cast", "price": 3600, "status": "available", "img": "img/c87.jpg"}, {"id": "c88", "lot": 88, "name": "RLC Porsche 959 (Gulf)", "cat": "Die-cast", "price": 9000, "status": "available", "img": "img/c88.jpg"}, {"id": "c89", "lot": 89, "name": "RLC Custom ’72 Datsun 240Z", "cat": "Die-cast", "price": 4800, "status": "available", "img": "img/c89.jpg"}, {"id": "c90", "lot": 90, "name": "Mercedes-Benz Project G-Class Past II Future – Moncler by NIGO", "cat": "Die-cast", "price": 11500, "status": "available", "img": "img/c90.jpg"}, {"id": "c91", "lot": 91, "name": "RLC BMW M3 (E46)", "cat": "Die-cast", "price": 5900, "status": "available", "img": "img/c91.jpg"}, {"id": "c92", "lot": 92, "name": "Car Culture Japan Historics 4: Mazda RX-3", "cat": "Die-cast", "price": 1300, "status": "available", "img": "img/c92.jpg"}, {"id": "c93", "lot": 93, "name": "Hot Wheels × Wrangler 1985 Ford Bronco", "cat": "Die-cast", "price": 5800, "status": "available", "img": "img/c93.jpg"}, {"id": "c94", "lot": 94, "name": "Car Culture Silhouettes: Mazda RX-7 FC Pandem", "cat": "Die-cast", "price": 1300, "status": "available", "img": "img/c94.jpg"}, {"id": "c95", "lot": 95, "name": "Hot Wheels Legends Archive × Daniel Arsham Eroded Twin Mill", "cat": "Die-cast", "price": 8000, "status": "available", "img": "img/c95.jpg"}, {"id": "c96", "lot": 96, "name": "Car Culture Japan Historics 4 Container Set (5 cars)", "cat": "Die-cast", "price": 4900, "status": "available", "img": "img/c96.jpg"}, {"id": "c97", "lot": 97, "name": "Elite 64 1989 Toyota HiLux Stadium Truck", "cat": "Die-cast", "price": 3700, "status": "available", "img": "img/c97.jpg"}, {"id": "c98", "lot": 98, "name": "Car Culture Jay Leno’s Garage Container Set", "cat": "Die-cast", "price": 4500, "status": "available", "img": "img/c98.jpg"}, {"id": "c99", "lot": 99, "name": "Elite 64 Mod Shop ’17 Toyota Tacoma", "cat": "Die-cast", "price": 3600, "status": "available", "img": "img/c99.jpg"}, {"id": "c100", "lot": 100, "name": "Matchbox Collectors 1979 Chevy Blazer", "cat": "Die-cast", "price": 3000, "status": "available", "img": "img/c100.jpg"}, {"id": "c101", "lot": 101, "name": "RLC Koenigsegg Jesko Absolut", "cat": "Die-cast", "price": 8300, "status": "available", "img": "img/c101.jpg"}, {"id": "c102", "lot": 102, "name": "Hot Wheels Aston Martin Valkyrie", "cat": "Die-cast", "price": 2900, "status": "available", "img": "img/c102.jpg"}, {"id": "c103", "lot": 103, "name": "RLC Club Exclusive 1969 Dodge Charger R/T (Pink)", "cat": "Die-cast", "price": 5500, "status": "available", "img": "img/c103.jpg"}, {"id": "f104", "lot": 104, "name": "Funko Mystery Minis: Demon Slayer", "cat": "Figures & Blind Boxes", "price": 900, "status": "available", "img": "img/f104.jpg"}, {"id": "f105", "lot": 105, "name": "Funko Mystery Minis: One Piece", "cat": "Figures & Blind Boxes", "price": 900, "status": "available", "img": "img/f105.jpg"}, {"id": "f106", "lot": 106, "name": "Funko Mystery Minis: Naruto Shippuden", "cat": "Figures & Blind Boxes", "price": 900, "status": "available", "img": "img/f106.jpg"}, {"id": "f107", "lot": 107, "name": "Funko Mystery Minis: Jujutsu Kaisen", "cat": "Figures & Blind Boxes", "price": 900, "status": "available", "img": "img/f107.jpg"}, {"id": "t108", "lot": 108, "name": "One Piece Promo P-075 Monkey.D.Luffy (Sealed)", "cat": "TCG", "price": 2500, "status": "available", "img": "img/t108.jpg"}]}</script><script id="main">
+(function(){
+"use strict";
+var TITLE='<title>Collectibles I-rie Price Guide</title>';
+var DATA=JSON.parse(document.getElementById('catalog').textContent);
+var S={products:DATA.products.map(function(p){return Object.assign({},p)}),cats:DATA.categories.slice(),q:'',cat:'all',sort:'lot',showSold:false,manage:false,dirty:0,canManage:location.hash==='#manage'};
+var STASH='irie-pending-'+DATA.updatedAt;
+try{var st=sessionStorage.getItem(STASH);if(st){st=JSON.parse(st);S.products=st.products;S.cats=st.cats;S.dirty=st.dirty||1;S.manage=true;S.canManage=true;}}catch(e){}
+var app=document.getElementById('app');
+var inr=new Intl.NumberFormat('en-IN');
+function money(n){return '₹'+inr.format(Math.round(n))}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function lotStr(n){return 'No. '+String(n).padStart(3,'0')}
+function initials(c){return (c||'?').split(/[\s&]+/).filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
+function phHTML(p,withCat){
+  var inner=p.img?'<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'" loading="lazy">':'<span class="glyph">'+esc(initials(p.cat))+'</span>';
+  return '<div class="ph">'+inner+(withCat?'<span class="cat">'+esc(p.cat)+'</span>':'')+'</div>';
+}
+function visible(){
+  var q=S.q.trim().toLowerCase();
+  var list=S.products.filter(function(p){
+    if(!S.manage&&p.status==='hidden')return false;
+    if(!S.showSold&&!S.manage&&p.status==='sold')return false;
+    if(S.cat!=='all'&&p.cat!==S.cat)return false;
+    if(q&&(p.name+' '+p.cat+' '+p.lot).toLowerCase().indexOf(q)<0)return false;
+    return true;});
+  var f={lot:function(a,b){return a.lot-b.lot},low:function(a,b){return a.price-b.price},high:function(a,b){return b.price-a.price},name:function(a,b){return a.name.localeCompare(b.name)}}[S.sort];
+  list.sort(function(a,b){var sa=a.status==='sold',sb=b.status==='sold';return sa===sb?f(a,b):(sa?1:-1)});
+  return list;
+}
+function countIn(cat){return S.products.filter(function(p){return (cat==='all'||p.cat===cat)&&(S.manage||(p.status!=='hidden'&&(S.showSold||p.status!=='sold')))}).length}
+function renderShell(){
+  app.innerHTML=
+  '<header class="top"><div class="wrap"><div class="bar"><div class="brand"><b>Collectibles <i>I-rie</i></b><span>Exhibition price guide</span></div>'+
+  '<label class="search" for="q"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search a card, car or figure, or a No." autocomplete="off"></label></div>'+
+  '<div class="tools"><div class="chips" id="chips" role="toolbar" aria-label="Categories"></div><div class="opts">'+
+  '<select class="sel" id="sort" aria-label="Sort"><option value="lot">By No.</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A–Z</option></select>'+
+  '<label class="tog" id="soldwrap"><input type="checkbox" id="sold"> Sold out</label></div></div></div></header>'+
+  '<main class="wrap"><div id="mbar"></div><p class="count" id="count"></p><div class="grid" id="grid"></div>'+
+  '<footer><span>Prices in Indian rupees, inclusive. Ask at the counter with the item No. · Updated <span id="upd"></span></span>'+
+  '<span><a href="https://collectiblesirie.com/" target="_blank" rel="noopener">collectiblesirie.com</a> · <a href="https://www.instagram.com/collectiblesirie/" target="_blank" rel="noopener">@collectiblesirie</a><button class="linkbtn" id="mng" hidden>Manage</button></span></footer></main>'+
+  '<div id="pub"></div><div id="ov"></div>';
+  document.getElementById('upd').textContent=new Date(DATA.updatedAt).toLocaleString('en-IN',{day:'numeric',month:'short',hour:'numeric',minute:'2-digit'});
+  var q=document.getElementById('q');q.addEventListener('input',function(){S.q=q.value;renderGrid()});
+  var so=document.getElementById('sort');so.addEventListener('change',function(){S.sort=so.value;renderGrid()});
+  var sd=document.getElementById('sold');sd.addEventListener('change',function(){S.showSold=sd.checked;renderAll()});
+  document.getElementById('mng').addEventListener('click',function(){S.manage=!S.manage;renderAll()});
+  document.getElementById('grid').addEventListener('click',function(e){var c=e.target.closest('.card');if(!c)return;var p=find(c.dataset.id);if(!p)return;if(S.manage)openEditor(p);else openDetail(p)});
+}
+function find(id){for(var i=0;i<S.products.length;i++)if(S.products[i].id===id)return S.products[i];return null}
+function renderChips(){
+  var cats=['all'].concat(S.cats);
+  document.getElementById('chips').innerHTML=cats.map(function(c){var n=countIn(c);if(c!=='all'&&!n&&!S.manage)return '';
+    return '<button class="chip-btn" data-c="'+esc(c)+'" aria-pressed="'+(S.cat===c)+'">'+esc(c==='all'?'All':c)+'<small>'+n+'</small></button>'}).join('');
+  document.querySelectorAll('.chip-btn').forEach(function(b){b.addEventListener('click',function(){S.cat=b.dataset.c;renderChips();renderGrid()})});
+}
+function cardHTML(p){
+  var cls='card'+(p.status==='sold'?' is-sold':'')+(p.status==='hidden'?' is-hidden':'');
+  var st=p.status==='sold'?'<span class="state sold">Sold</span>':p.status==='hidden'?'<span class="state hidden">Hidden</span>':'';
+  return '<button class="'+cls+'" data-id="'+esc(p.id)+'">'+phHTML(p,true)+
+   '<span class="tag">'+(p.was?'<s>'+money(p.was)+'</s>':'')+money(p.price)+'</span>'+
+   '<div class="info"><div class="lot"><span>'+lotStr(p.lot)+'</span>'+st+'</div><h3 class="name">'+esc(p.name)+'</h3></div></button>';
+}
+function renderGrid(){
+  var list=visible();
+  document.getElementById('count').textContent=list.length+(list.length===1?' item':' items')+(S.cat!=='all'?' in '+S.cat:'');
+  document.getElementById('grid').innerHTML=list.length?list.map(cardHTML).join(''):'<div class="empty">Nothing matches that search. Try a shorter word or pick “All”.</div>';
+}
+function renderManage(){
+  var mb=document.getElementById('mbar');
+  document.getElementById('mng').textContent=S.manage?'Exit manage mode':'Manage';
+  document.getElementById('soldwrap').hidden=S.manage;
+  mb.innerHTML=S.manage?'<div class="mbar"><p>Manage mode. Tap any item to edit it. Sold and hidden items are shown here; visitors see hidden items never and sold items only when they ask.</p><button class="btn primary" id="add">Add product</button></div>':'';
+  if(S.manage)document.getElementById('add').addEventListener('click',function(){openEditor(null)});
+  var pb=document.getElementById('pub');
+  if(S.dirty){
+    pb.innerHTML='<div class="pub"><div class="wrap"><p>'+S.dirty+' unpublished '+(S.dirty===1?'change':'changes')+'. Visitors see the old list until you publish.</p><button class="btn ghost" id="discard">Discard</button><button class="btn" id="publish">Publish</button></div></div>';
+    document.getElementById('publish').addEventListener('click',publish);
+    document.getElementById('discard').addEventListener('click',function(){try{sessionStorage.removeItem(STASH)}catch(e){}S.products=DATA.products.map(function(p){return Object.assign({},p)});S.cats=DATA.categories.slice();S.dirty=0;renderAll();toast('Changes discarded')});
+    document.querySelector('main').style.paddingBottom='96px';
+  }else{pb.innerHTML='';document.querySelector('main').style.paddingBottom='';}
+}
+function renderAll(){renderChips();renderGrid();renderManage()}
+function closeOv(){document.getElementById('ov').innerHTML='';document.removeEventListener('keydown',escKey)}
+function escKey(e){if(e.key==='Escape')closeOv()}
+function openOv(html){
+  var ov=document.getElementById('ov');ov.innerHTML='<div class="ov"><div class="sheet" role="dialog" aria-modal="true">'+html+'</div></div>';
+  ov.firstChild.addEventListener('click',function(e){if(e.target===ov.firstChild)closeOv()});
+  ov.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',closeOv)});
+  document.addEventListener('keydown',escKey);
+  return ov;
+}
+var X='<button class="x" data-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>';
+function openDetail(p){
+  openOv('<div class="sheet-head"><span class="lot">'+lotStr(p.lot)+'</span>'+X+'</div><div class="detail">'+phHTML(p,false)+
+  '<div><h2 style="font-family:var(--display);font-size:24px;margin:0 0 10px;text-wrap:balance">'+esc(p.name)+'</h2>'+
+  '<div class="big-price">'+money(p.price)+(p.was?'<s>'+money(p.was)+'</s>':'')+'</div>'+
+  '<dl class="kv"><dt>Category</dt><dd>'+esc(p.cat)+'</dd><dt>Status</dt><dd>'+(p.status==='sold'?'Sold out':'Available at the stand')+'</dd></dl>'+
+  (p.note?'<p class="note">'+esc(p.note)+'</p>':'')+
+  '<p class="note">Quote <b>'+lotStr(p.lot)+'</b> at the counter.</p></div></div>');
+}
+var draftImg;
+function openEditor(p){
+  var isNew=!p;
+  var d=p?Object.assign({},p):{id:'n'+Date.now().toString(36),lot:S.products.reduce(function(m,x){return Math.max(m,x.lot)},0)+1,name:'',cat:S.cat!=='all'?S.cat:S.cats[0],price:'',status:'available'};
+  draftImg=d.img||'';
+  var catOpts=S.cats.map(function(c){return '<option'+(c===d.cat?' selected':'')+'>'+esc(c)+'</option>'}).join('')+'<option value="__new">New category…</option>';
+  var ov=openOv('<div class="sheet-head"><h2>'+(isNew?'Add product':'Edit '+lotStr(d.lot))+'</h2>'+X+'</div>'+
+  '<form class="ed" id="ed" novalidate>'+
+  '<div class="photo"><div id="pv">'+phHTML(d,false)+'</div><div class="f" style="flex:1"><label for="img">Photo</label><input type="file" id="img" accept="image/*"><button type="button" class="linkbtn" id="rmimg" style="font-size:13px;align-self:flex-start"'+(d.img?'':' hidden')+'>Remove photo</button></div></div>'+
+  '<div class="f"><label for="nm">Name</label><input id="nm" value="'+esc(d.name)+'" required></div>'+
+  '<div class="row2"><div class="f"><label for="pr">Price (₹)</label><input id="pr" inputmode="numeric" value="'+esc(d.price)+'"></div><div class="f"><label for="was">Was (₹, optional)</label><input id="was" inputmode="numeric" value="'+esc(d.was||'')+'"></div></div>'+
+  '<div class="row2"><div class="f"><label for="ct">Category</label><select id="ct">'+catOpts+'</select><input id="ctn" placeholder="New category name" hidden></div>'+
+  '<div class="f"><label for="stt">Status</label><select id="stt"><option value="available">Available</option><option value="sold">Sold out</option><option value="hidden">Hidden from visitors</option></select></div></div>'+
+  '<div class="row2"><div class="f"><label for="lt">Item No.</label><input id="lt" inputmode="numeric" value="'+esc(d.lot)+'"></div><div class="f"></div></div>'+
+  '<div class="f"><label for="nt">Note (optional)</label><textarea id="nt" placeholder="Grade, condition, edition, size…">'+esc(d.note||'')+'</textarea></div>'+
+  '<p class="msg" id="err" hidden></p>'+
+  '<div class="acts">'+(isNew?'':'<button type="button" class="btn warn left" id="del">Delete</button>')+'<button type="button" class="btn" data-close>Cancel</button><button type="submit" class="btn primary">'+(isNew?'Add':'Save')+'</button></div></form>');
+  ov.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',closeOv)});
+  var $=function(id){return document.getElementById(id)};
+  $('stt').value=d.status;
+  $('ct').addEventListener('change',function(){$('ctn').hidden=$('ct').value!=='__new';if(!$('ctn').hidden)$('ctn').focus()});
+  function refreshPv(){$('pv').innerHTML=phHTML({img:draftImg,cat:$('ct').value==='__new'?$('ctn').value:$('ct').value},false);$('rmimg').hidden=!draftImg}
+  $('rmimg').addEventListener('click',function(){draftImg='';refreshPv()});
+  $('img').addEventListener('change',function(){var f=$('img').files[0];if(!f)return;shrink(f).then(function(u){draftImg=u;refreshPv()}).catch(function(){showErr('That file could not be read as an image. Try a JPG or PNG.')})});
+  function showErr(m){$('err').textContent=m;$('err').hidden=false}
+  if(!isNew)$('del').addEventListener('click',function(){
+    var b=$('del');if(b.dataset.armed){S.products=S.products.filter(function(x){return x.id!==d.id});changed();closeOv();toast('Deleted '+lotStr(d.lot))}
+    else{b.dataset.armed='1';b.textContent='Tap again to delete'}});
+  $('ed').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=$('nm').value.trim(),price=Number(String($('pr').value).replace(/[^\d.]/g,'')),was=Number(String($('was').value).replace(/[^\d.]/g,''))||0,lot=parseInt($('lt').value,10);
+    var cat=$('ct').value==='__new'?$('ctn').value.trim():$('ct').value;
+    if(!name)return showErr('Add a name so visitors know what this is.');
+    if(!price)return showErr('Enter the price in rupees, numbers only.');
+    if(!cat)return showErr('Type a name for the new category.');
+    if(!lot||lot<1)return showErr('Item No. must be a whole number.');
+    var clash=S.products.some(function(x){return x.lot===lot&&x.id!==d.id});
+    if(clash)return showErr(lotStr(lot)+' is already used by another item.');
+    if(S.cats.indexOf(cat)<0)S.cats.push(cat);
+    var out={id:d.id,lot:lot,name:name,cat:cat,price:price,status:$('stt').value};
+    if(was>price)out.was=was;
+    var nt=$('nt').value.trim();if(nt)out.note=nt;
+    if(draftImg)out.img=draftImg;
+    if(isNew)S.products.push(out);else S.products=S.products.map(function(x){return x.id===d.id?out:x});
+    changed();closeOv();toast(isNew?'Added '+lotStr(lot):'Saved '+lotStr(lot));
+  });
+  setTimeout(function(){$('nm').focus()},30);
+}
+function shrink(file){return new Promise(function(res,rej){
+  var r=new FileReader();r.onerror=rej;r.onload=function(){var im=new Image();im.onerror=rej;im.onload=function(){
+    var max=720,w=im.naturalWidth,h=im.naturalHeight,k=Math.min(1,max/Math.max(w,h));
+    var c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(h*k);
+    var g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.drawImage(im,0,0,c.width,c.height);
+    res(c.toDataURL('image/jpeg',0.78));};im.src=r.result;};r.readAsDataURL(file);})}
+function changed(){
+  S.dirty++;
+  try{sessionStorage.setItem(STASH,JSON.stringify({products:S.products,cats:S.cats,dirty:S.dirty}))}catch(e){}
+  renderAll();
+}
+var tt;function toast(m){var t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.textContent=m;document.body.appendChild(t);clearTimeout(tt);tt=setTimeout(function(){t.remove()},2200)}
+function buildDoc(data){
+  var hs=document.querySelector('head style');var reset=hs?hs.textContent:'';
+  var json=JSON.stringify(data).replace(/</g,'\\u003c');
+  var fonts=document.getElementById('fonts').outerHTML;
+  var css=document.getElementById('css').textContent;
+  var main=document.getElementById('main').textContent;
+  var C='</scr'+'ipt>';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+reset+'</style></head><body>'+
+    TITLE+fonts+'<style id="css">'+css+'</style><div id="app"></div><script type="application/json" id="catalog">'+json+C+'<script id="main">'+main+C+'</body></html>';
+}
+function publish(){
+  var btn=document.getElementById('publish');btn.disabled=true;btn.textContent='Publishing…';
+  var fail=function(m){btn.disabled=false;btn.textContent='Publish';toast(m)};
+  var used=S.cats.filter(function(c){return S.products.some(function(p){return p.cat===c})});
+  var doc=buildDoc({updatedAt:new Date().toISOString(),categories:used,products:S.products.slice().sort(function(a,b){return a.lot-b.lot})});
+  if(!(window.claude&&window.claude.use))return fail('Saving only works when the page is open on claude.ai.');
+  window.claude.use('artifact').then(function(a){
+    if(!a)return fail('This view can’t save. Open the page from your own Claude account.');
+    return a.publish(doc).then(function(){try{sessionStorage.removeItem(STASH)}catch(e){}},function(e){
+      var c=e&&e.code;
+      if(c==='conflict'){try{sessionStorage.removeItem(STASH)}catch(x){}return;}
+      if(c==='not_writer'||c==='not_granted'||c==='consent_required'||c==='capability_disabled')return fail('This view is read-only. Sign in as the page owner to publish.');
+      if(c==='too_large')return fail('The page is too big to save. Remove a few photos or use smaller ones.');
+      if(c==='rate_limited')return fail('Publishing too often. Wait a minute, then publish again.');
+      fail('Publish didn’t go through. Try again in a moment.');
+    });
+  });
+}
+renderShell();renderAll();
+if(S.canManage)S.manage=S.manage||location.hash==='#manage',renderAll();
+if(window.claude&&window.claude.use){window.claude.use('user').then(function(u){if(!u||!u.canEdit)return;return Promise.resolve(u.canEdit()).then(function(ok){if(ok&&!S.manage)toast('You can edit this guide: tap Manage at the bottom')})}).catch(function(){})}
+})();
+</script>
+</body></html>
